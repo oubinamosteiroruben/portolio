@@ -1,0 +1,250 @@
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  margin: auto;
+  padding: 8vh 6vh 12vh 6vh;
+}
+@media (min-width: 2000px) {
+  .about {
+    max-width: 1900px;
+  }
+}
+@media (max-width: 1999px) {
+  .about {
+    max-width: 1700px;
+  }
+}
+.about .first-row {
+  display: grid;
+  grid-template-columns: 2fr 4fr 1.5fr;
+  gap: 4vh;
+}
+.about .second-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 8vh;
+}
+.about .card-about {
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  color: #333;
+  width: 100%;
+}
+.about .third-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about .delimitador {
+  width: 2px;
+  height: 100px;
+  background-color: #333;
+  margin: 0 20px;
+}
+.about .personal-summary {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+}
+.about .personal-summary .first-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+.about .personal-summary .first-container img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.about .personal-summary .first-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.about .personal-summary .first-container .icon-hand {
+  font-size: 2rem;
+  vertical-align: super;
+  color: #ffcc00;
+}
+.about .personal-summary .description {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.about .work-temporal-line .container-titulo {
+  padding: 2rem;
+}
+.about .work-temporal-line .container-titulo h1 {
+  font-size: 1.5rem;
+}
+.about .work-temporal-line .work-list {
+  display: flex;
+  flex-direction: column;
+}
+.about .work-temporal-line .work-list .work-item {
+  padding: 2rem;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.about .work-temporal-line .work-list .work-item .first-line {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.about .work-temporal-line .work-list .work-item .first-line .img-work {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.about .work-temporal-line .work-list .work-item .first-line .title {
+  font-weight: bold;
+}
+.about .work-temporal-line .work-list .work-item .first-line .date {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.about .work-temporal-line .work-list .work-item.selected {
+  background-color: #eee;
+}
+.about .work-temporal-line .work-list .work-item:hover {
+  background-color: #ddd;
+}
+.about .formation-temporal-line .container-titulo {
+  padding: 2rem;
+}
+.about .formation-temporal-line .container-titulo h1 {
+  font-size: 1.5rem;
+}
+.about .formation-temporal-line .formation-list {
+  display: flex;
+  flex-direction: column;
+}
+.about .formation-temporal-line .formation-list .formation-item {
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  background-color: transparent;
+  position: relative;
+}
+.about .formation-temporal-line .formation-list .formation-item .title {
+  font-weight: bold;
+}
+.about .formation-temporal-line .formation-list .formation-item .date {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.about .formation-temporal-line .formation-list .formation-item .nota {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 5px;
+  text-align: end;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+}
+.about .formation-temporal-line .formation-list .formation-item:nth-child(odd) {
+  background-color: #eee;
+}
+.about .languages-line .container-titulo {
+  padding: 2rem;
+}
+.about .languages-line .container-titulo h1 {
+  font-size: 1.5rem;
+}
+.about .languages-line .languages-list {
+  display: flex;
+  flex-direction: column;
+}
+.about .languages-line .languages-list .language-item {
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  background-color: transparent;
+  display: flex;
+}
+.about .languages-line .languages-list .language-item .language {
+  font-weight: bold;
+}
+.about .languages-line .languages-list .language-item .level {
+  margin-left: auto;
+}
+.about .languages-line .languages-list .language-item:nth-child(odd) {
+  background-color: #eee;
+}
+.about .expanded-item-work {
+  padding: 2rem;
+  background-color: transparent;
+}
+.about .expanded-item-work .first-line {
+  gap: 2rem;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.about .expanded-item-work .second-line {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  gap: 2rem;
+}
+.about .expanded-item-work .title {
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+}
+.about .expanded-item-work .title-subcategory {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.about .expanded-item-work .company {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+}
+.about .expanded-item-work .date {
+  display: flex;
+  font-size: 1.5rem;
+  gap: 0.5rem;
+  align-items: center;
+  margin-left: auto;
+}
+.about .expanded-item-work .img-work {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.about .expanded-item-work .delimitador {
+  margin: 0 0;
+  height: 100%;
+}
+.about .expanded-item-work .description p {
+  padding-left: 2rem;
+  text-align: justify;
+}
+.about .expanded-item-work .description .description-list {
+  padding-left: 2rem;
+}
+.about .expanded-item-work .description .description-list .description-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.about .expanded-item-work .description .description-list .description-item .icon {
+  font-size: 0.75rem;
+  color: #333;
+}
+.about .expanded-item-work .technologies .technologies-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.about .expanded-item-work .technologies .technologies-list .technologies-item {
+  padding: 1rem;
+  background-color: #eee;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=About.css.map */

@@ -1,0 +1,38 @@
+
+.home{
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 23vh);
+    justify-content: center;
+    background: linear-gradient(153deg, #0000 50%, #eee 50%);
+    position: relative;
+
+    h1 {
+        font-size: 7rem;
+        font-weight: bold;
+        margin: 100px;
+        font-family: Waffle Cake, sans-serif;
+        text-align: center;
+    }
+
+    @media (max-width: 1000px){
+        height: calc(100vh - 17vh);
+        h1{
+            font-size: 3rem;
+        }
+    }
+
+    .img-container{
+        position:absolute;
+        right: 30px;
+        top: 30px;
+        .img-face {
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Sombra */
+            border: 5px solid #fff; /* Borde */
+        }
+    }
+
+}

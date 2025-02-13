@@ -1,0 +1,15 @@
+.footer{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 4vh;
+    bottom: 0;
+    color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    .footer-container{
+        display: flex;
+        gap: 20px;
+    }
+}
