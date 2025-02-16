@@ -265,7 +265,7 @@
     padding: 6vh 4vh 12vh 4vh;
   }
   .about .first-row {
-    grid-template-areas: "personal-summary" "work-temporal-line" "formation-temporal-line" "languages-line";
+    grid-template-areas: "personal-summary" "work-temporal-line" "third-column";
     grid-template-columns: 1fr;
   }
   .about .first-row .third-column {
