@@ -17,6 +17,7 @@
     .first-row{
         display: grid;
         grid-template-columns: 2fr 4fr 1.5fr;
+        grid-template-areas: "work-temporal-line personal-summary third-column";
         gap: 4vh;
     }
 
@@ -42,6 +43,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        grid-area: third-column;
     }
 
     .delimitador {
@@ -55,6 +57,7 @@
         text-align: center;
         max-width: 800px;
         padding: 2rem;
+        grid-area: personal-summary;
       
         .first-container {
           display: flex;
@@ -92,6 +95,8 @@
     }
 
     .work-temporal-line {
+        
+        grid-area: work-temporal-line;
 
         .container-titulo{
             padding: 2rem;
@@ -140,6 +145,8 @@
 
     .formation-temporal-line {
 
+        grid-area: formation-temporal-line;
+
         .container-titulo{
             padding: 2rem;
             h1{
@@ -182,6 +189,9 @@
     }
 
     .languages-line {
+
+        
+        grid-area: languages-line;
 
         .container-titulo{
             padding: 2rem;
@@ -303,6 +313,82 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 768px){ // Mobile style
+        padding: 6vh 4vh 12vh 4vh;
+        .first-row{
+            grid-template-areas: "personal-summary" "work-temporal-line" "formation-temporal-line" "languages-line";
+            grid-template-columns: 1fr;
+
+            .third-column{
+                gap: 4vh;
+            }
+
+            .personal-summary{
+                .first-container{
+                    h1{
+                        font-size: 1.5rem;
+                    }
+
+                    .delimitador{
+                        display: none;
+                    }
+                }
+            }            
+            
+        }
+
+        .expanded-item-work{
+            .first-line{
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                grid-template-areas: "img-work title" "img-work company" "date date";
+                gap: 0.25rem;
+
+
+                .title{
+                    font-size: 1rem;
+                    grid-area: title;
+                }
+
+                .img-work{
+                    grid-area: img-work;
+                }
+
+                .company{
+                    font-size: 1rem;
+                    grid-area: company;
+                }
+
+                .date{
+                    font-size: 1rem;
+                    grid-area: date;
+                    margin-top: 1rem;
+                }
+
+            }
+
+            .second-line{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-areas: "description" "technologies";
+
+                .description{
+                    grid-area: description;
+                }
+
+                .delimitador{
+                    display: none;
+                }
+
+                .technologies{
+                    grid-area: technologies;
+                }
+            }
+        }
+        
+        
     }
       
 }

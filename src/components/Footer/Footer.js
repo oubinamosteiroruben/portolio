@@ -8,7 +8,7 @@ function Footer(){
             <div className="footer-container">
                 <div className="footer-text">© Developed by Rubén Oubiña - 2025</div>
                 <div className="links">
-                    <a title='Link to Linkedin' href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank"><FontAwesomeIcon icon={faBell} /></a>
+                    <a title='Link to Linkedin' href="https://linkedin.com/in/oubinamosteiroruben" target="_blank"><FontAwesomeIcon icon={faBell} /></a>
                 </div>
             </div>
         </div>

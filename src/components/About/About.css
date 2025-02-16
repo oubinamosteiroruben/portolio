@@ -19,6 +19,7 @@
 .about .first-row {
   display: grid;
   grid-template-columns: 2fr 4fr 1.5fr;
+  grid-template-areas: "work-temporal-line personal-summary third-column";
   gap: 4vh;
 }
 .about .second-row {
@@ -39,6 +40,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  grid-area: third-column;
 }
 .about .delimitador {
   width: 2px;
@@ -50,6 +52,7 @@
   text-align: center;
   max-width: 800px;
   padding: 2rem;
+  grid-area: personal-summary;
 }
 .about .personal-summary .first-container {
   display: flex;
@@ -77,6 +80,9 @@
   gap: 2rem;
   display: flex;
   flex-direction: column;
+}
+.about .work-temporal-line {
+  grid-area: work-temporal-line;
 }
 .about .work-temporal-line .container-titulo {
   padding: 2rem;
@@ -116,6 +122,9 @@
 .about .work-temporal-line .work-list .work-item:hover {
   background-color: #ddd;
 }
+.about .formation-temporal-line {
+  grid-area: formation-temporal-line;
+}
 .about .formation-temporal-line .container-titulo {
   padding: 2rem;
 }
@@ -150,6 +159,9 @@
 }
 .about .formation-temporal-line .formation-list .formation-item:nth-child(odd) {
   background-color: #eee;
+}
+.about .languages-line {
+  grid-area: languages-line;
 }
 .about .languages-line .container-titulo {
   padding: 2rem;
@@ -247,4 +259,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .about {
+    padding: 6vh 4vh 12vh 4vh;
+  }
+  .about .first-row {
+    grid-template-areas: "personal-summary" "work-temporal-line" "formation-temporal-line" "languages-line";
+    grid-template-columns: 1fr;
+  }
+  .about .first-row .third-column {
+    gap: 4vh;
+  }
+  .about .first-row .personal-summary .first-container h1 {
+    font-size: 1.5rem;
+  }
+  .about .first-row .personal-summary .first-container .delimitador {
+    display: none;
+  }
+  .about .expanded-item-work .first-line {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img-work title" "img-work company" "date date";
+    gap: 0.25rem;
+  }
+  .about .expanded-item-work .first-line .title {
+    font-size: 1rem;
+    grid-area: title;
+  }
+  .about .expanded-item-work .first-line .img-work {
+    grid-area: img-work;
+  }
+  .about .expanded-item-work .first-line .company {
+    font-size: 1rem;
+    grid-area: company;
+  }
+  .about .expanded-item-work .first-line .date {
+    font-size: 1rem;
+    grid-area: date;
+    margin-top: 1rem;
+  }
+  .about .expanded-item-work .second-line {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "description" "technologies";
+  }
+  .about .expanded-item-work .second-line .description {
+    grid-area: description;
+  }
+  .about .expanded-item-work .second-line .delimitador {
+    display: none;
+  }
+  .about .expanded-item-work .second-line .technologies {
+    grid-area: technologies;
+  }
 }/*# sourceMappingURL=About.css.map */
